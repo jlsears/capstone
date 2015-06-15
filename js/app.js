@@ -10,4 +10,4 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 
-app.constant('API_URL', 'https://angulartodofire.firebaseio.com/');
+app.constant('API_URL', 'https://angulartodofire.firebaseio.com');
