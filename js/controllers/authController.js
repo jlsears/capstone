@@ -9,7 +9,7 @@ app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $loc
     $scope.register = function() {
       Auth.register($scope.user.email, $scope.user.password, function() {
         Auth.login($scope.user.email, $scope.user.password, function() {
-          $location.path('/login');
+          $location.path('/todo');
           $scope.$apply();
         });
       });
