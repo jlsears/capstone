@@ -1,26 +1,19 @@
 app.factory('Todo', ['$http','API_URL', function ($http, API_URL) {
+    function addTodo(id, todo, cb) {
+      $http
+        .post(`${API_URL}/todos/${id}.json`, todo)
+        .success(cb);
+    }
+    function getMyTodos(id, cb) {
+      $http
+        .get(`${API_URL}/todos/${id}.json`)
+        .success(cb)
+        .error(function(data, error) { console.log(error); });
+    }
   function getAll(cb) {
     $http
       .get(`${API_URL}/todo.json`)
       .success(cb);
   }
-
-  function create(data, cb) {
-    $http
-      .post(`${API_URL}/todo.json`, data)
-      .success(cb);
-  }
-
-  function update(id, data, cb) {
-    $http
-      .put(`${API_URL}/todo/${id}.json`, data)
-      .success(cb);
-  }
-
-  function destroy(id, cb) {
-    $http
-      .delete(`${API_URL}/todo/${id}.json`)
-      .success(cb);
-  }
-    return {getAll:getAll, create:create, update:update, destroy:destroy};
+    return {addTodo:addTodo, getMyTodos:getMyTodos, getAll:getAll};
   }]);
