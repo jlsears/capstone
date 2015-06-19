@@ -1,58 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
 <head>
-    <title>Firebase Todo Angular</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
- <nav class="navbar navbar-default" ng-controller='AuthCtrl'>
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/#/">Angular-firebase-todo</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/#/register">Register</a></li>
-        <li><a href="/#/login">Login</a></li>
-        <li><a href="/#/todo">Todo</a></li>
-        <li><button ng-click='logout()' ng-hide='!auth.password.email'>Logout {{auth.password.email}}</button></li>
-          
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
+  <metacharset='utf8'>
+  <base href='/'>
+  <title> The Film Agenda App</title>
+  <link rel='stylesheet' href='/stylesheets/style.css'>
+  <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css'>
 <body ng-app="myApp">
 
-<div ng-view></div>
-<!-- Vendor: Angular, followed by our custom Javascripts -->
-<script src="bower_components/angular/angular.min.js"></script>
-<script src="bower_components/angular-route/angular-route.min.js"></script>
-<script src="bower_components/firebase/firebase.js"></script>
+<div ng-view>
 
-<!-- Our Website Javascripts -->
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/factories/authFactory.js"></script>
-<script src="js/factories/todoFactory.js"></script>
-<script src="js/directives/newDirective.js"></script>
-<script src="js/controllers/mainController.js"></script>
-<script src="js/controllers/authController.js"></script>
-<script src="js/controllers/todoController.js"></script>
+
+</div>
+
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src='public/app.js'></script>
+  <script src='bower_components/jquery/dist/jquery.min.js'></script>
+  <script src='bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+  <script src='public/controllers/faveperformercontroller.js'></script>
+  <script src='public/controllers/friendnotifcontroller.js'></script>
+  <script src='public/controllers/haveseencontroller.js'></script>
+  <script src='public/controllers/homecontroller.js'></script>
+  <script src='public/controllers/localshowcontroller.js'></script>
+  <script src='public/controllers/thetweetscontroller.js'></script>
+  <script src='public/controllers/toseecontroller.js'></script>
+  <script src='public/controllers/menucontroller.js'></script>
+
 </body>
 </html>

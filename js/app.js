@@ -2,12 +2,41 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
-    .when("/", {templateUrl: "partials/home.html", controller: "MainCtrl"})
-    .when("/register", {templateUrl: "partials/register.html", controller: "AuthCtrl"})
-    .when("/login", {templateUrl: "partials/login.html", controller: "AuthCtrl"})
-    .when("/todo", {templateUrl: "partials/todo.html", controller: "TodoCtrl"})
-    .otherwise("/", {templateUrl: "partials/home.html", controller: "MainCtrl"});
-}]);
+    .when('/', {
+      templateUrl: 'partials/index.html',
+      controller: 'HomeCtrl'
+    }).
+    when('/menu', {
+      templateUrl: 'partials/menu.html',
+      controller: 'MenuCtrl'
+    }).
+    when('/faveperformers', {
+      templateUrl: 'partials/faveperformers.html',
+      controller: 'PerformerCtrl'
+    }).
+    when('/friendnotif', {
+      templateUrl: 'partials/friendnotif.html',
+      controller: 'FriendNotifCtrl'
+    }).
+    when('/haveseen', {
+      templateUrl: 'partials/haveseen.html',
+      controller: 'HaveSeenCtrl'
+    }).
+    when('/localshow', {
+      templateUrl: 'partials/localshow.html',
+      controller: 'LocalShowCtrl'
+    }).
+    when('/thetweets', {
+      templateUrl: 'partials/thetweets.html',
+      controller: 'TheTweetsCtrl'
+    }).
+    when('/tosee', {
+      templateUrl: 'partials/tosee.html',
+      controller: 'ToSeeCtrl'
+    }).
+    otherwise({
+      redirectTo: '/'
+        });
+    }]);
 
 
-app.constant('API_URL', 'https://angulartodofire.firebaseio.com');
