@@ -18,7 +18,8 @@ app.factory('Auth', ['$rootScope', '$location', 'API_URL', function($rootScope, 
       fb.createUser({
         email: email,
         password: password
-      }, function(err, authData) {
+      }, 
+      function(err, authData) {
         if(err) {
           console.log(err)
         } else {

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('myApp', ['ngRoute', 'firebase']);
 
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
@@ -9,6 +9,14 @@ app.config(['$routeProvider', function ($routeProvider) {
     when('/menu', {
       templateUrl: 'partials/menu.html',
       controller: 'MenuCtrl'
+    }).
+    when('/register', {
+      templateUrl: 'partials/register.html',
+      controller: 'AuthCtrl'
+    }).
+    when('/login', {
+      templateUrl: 'partials/login.html',
+      controller: 'AuthCtrl'
     }).
     when('/faveperformers', {
       templateUrl: 'partials/faveperformers.html',
@@ -39,4 +47,4 @@ app.config(['$routeProvider', function ($routeProvider) {
         });
     }]);
 
-
+app.constant('API_URL', 'https://yourmovieagenda.firebaseio.com');

@@ -1,7 +1,7 @@
 app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
     $scope.login = function() {
       Auth.login($scope.user.email, $scope.user.password, function() {
-        $location.path('/todo');
+        $location.path('/menu');
         $scope.$apply();
       });
     };
@@ -9,7 +9,7 @@ app.controller('AuthCtrl', ['$scope', '$location', 'Auth', function($scope, $loc
     $scope.register = function() {
       Auth.register($scope.user.email, $scope.user.password, function() {
         Auth.login($scope.user.email, $scope.user.password, function() {
-          $location.path('/todo');
+          $location.path('/login');
           $scope.$apply();
         });
       });
