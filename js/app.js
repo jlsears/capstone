@@ -26,9 +26,13 @@ app.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'partials/friendnotif.html',
       controller: 'FriendNotifCtrl'
     }).
+    when('/movieenter', {
+      templateUrl: 'partials/movieenter.html',
+      controller: 'MovieDataCtrl'
+    }).
     when('/haveseen', {
       templateUrl: 'partials/haveseen.html',
-      controller: 'HaveSeenCtrl'
+      controller: 'MovieDataCtrl'
     }).
     when('/localshow', {
       templateUrl: 'partials/localshow.html',
@@ -40,7 +44,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).
     when('/tosee', {
       templateUrl: 'partials/tosee.html',
-      controller: 'ToSeeCtrl'
+      controller: 'MovieDataCtrl'
     }).
     otherwise({
       redirectTo: '/'

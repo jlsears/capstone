@@ -1,15 +1,5 @@
-<div>
-  <form role='form' novalidate='novalidate' name='seenForm'>
-    <div class='form-group'>
-    <label class="">Title</label> <br>
-    <input type='text ng-model='newSeen.title' id="title" name="title">
-    </div>
-    <button ng-click='addSeen()' class='btn btn-warning'>Submit</button>
-
-  </form>
-
 </div>
 <h1>Have Seen List</h1>
 <div class='row' ng-repeat='seen in seens'>
-  <div class='col-xs-3'>{{see.title}}</div>
+  <div class='col-xs-3'>{{addMovie.title}}</div>
 </div>
