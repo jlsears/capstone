@@ -4,11 +4,20 @@
       MovieData.addMovieData(id, $scope.newMovieData, function () {
         console.log('Movie entry created!!!')
         $scope.newMovieData = {};
-          MovieData.getMyMovieDatas(id, function (moviedatas) {
+          MovieData.getMyMovieData(id, function (moviedatas) {
             $scope.moviedatas = moviedatas;
           });
       });
     };
+
+    var getList = function() {
+      var id = $rootScope.auth.uid.replace(':', '%3A');
+      MovieData.getMyMovieData(id, function (moviedatas) {
+        return $scope.moviedatas = moviedatas;
+      });
+    };
+    getList();
+    
   }]);
 
 
