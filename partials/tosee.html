@@ -1,1 +1,11 @@
-<h1>To See View</h1>
+<h1>To See List</h1>
+<div class='row' ng-repeat='moviedata in moviedatas' ng-if='moviedata.tosee'>
+  <div class="col-xs-2">{{moviedata.title}}</div>
+  <div class="col-xs-2">{{moviedata.director}}</div>
+  <div class="col-xs-2">{{moviedata.theater}}</div>
+  <div class="col-xs-2">{{moviedata.moviegoers}}</div>
+  <div class="col-xs-2">
+    <button ng-click="deleteMovieData(moviedata.key)">Delete</button>
+  </div>
+  <div class="col-xs-2"></div>
+</div>

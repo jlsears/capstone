@@ -4,9 +4,6 @@
       MovieData.addMovieData(id, $scope.newMovieData, function () {
         console.log('Movie entry created!!!')
         $scope.newMovieData = {};
-          MovieData.getMyMovieData(id, function (moviedatas) {
-            $scope.moviedatas = moviedatas;
-          });
       });
     };
 
@@ -17,7 +14,14 @@
       });
     };
     getList();
-    
+
+    $scope.deleteMovieData = function() {
+      var id = $rootScope.auth.uid.replace(':', '%3A');
+      MovieData.deleteMovieData(id, $scope.moviedata, function () {
+        getList();
+      })
+    }
+
   }]);
 
 

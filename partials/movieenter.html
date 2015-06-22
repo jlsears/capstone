@@ -17,13 +17,14 @@
       <label class="">Fellow Moviegoers</label> <br>
       <input id="moviegoers" type='text' ng-model='newMovieData.moviegoers' name="moviegoers"/>
     </div>
+    <div>
+      <label class="">To See</label> <br>
+      <input id="tosee" type='checkbox' ng-model='newMovieData.tosee' name="tosee"/>
+    </div>
+    <div>
+      <label class="">Have Seen</label> <br>
+      <input id="haveseen" type='checkbox' ng-model='newMovieData.haveseen' name="haveseen"/>
+    </div>
     <button ng-click='addMovieData()' class='btn btn-warning'>Submit</button>
   </form>
-</div>
-<h1>Have Seen List</h1>
-<div class='row' ng-repeat='moviedata in moviedatas'>
-  <div class="col-xs-3">{{moviedata.title}}</div>
-  <div class="col-xs-3"></div>
-  <div class="col-xs-3"></div>
-  <div class="col-xs-3"></div>
 </div>

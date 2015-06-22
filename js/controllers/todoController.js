@@ -9,6 +9,4 @@ app.controller('TodoCtrl', ['$rootScope', '$scope', 'Todo', function($rootScope,
         });
     });
   };
-
-
 }]);
