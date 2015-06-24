@@ -15,9 +15,10 @@
     };
     getList();
 
-    $scope.deleteMovieData = function() {
+    $scope.deleteMovieData = function(moviedata) {
       var id = $rootScope.auth.uid.replace(':', '%3A');
-      MovieData.deleteMovieData(id, $scope.moviedata, function () {
+      MovieData.deleteMovieData(id, moviedata, function () {
+        console.log("Delete button clicked!");
         getList();
       })
     }

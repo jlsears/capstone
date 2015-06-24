@@ -4,7 +4,7 @@ app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'partials/home.html',
-      controller: 'HomeCtrl'
+      controller: 'AuthCtrl'
     }).
     when('/menu', {
       templateUrl: 'partials/menu.html',
