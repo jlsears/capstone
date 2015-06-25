@@ -4,7 +4,7 @@ app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'partials/home.html',
-      controller: 'AuthCtrl'
+      controller: 'HomeCtrl'
     }).
     when('/menu', {
       templateUrl: 'partials/menu.html',
@@ -51,4 +51,4 @@ app.config(['$routeProvider', function ($routeProvider) {
         });
     }]);
 
-app.constant('API_URL', 'https://yourmovieagenda.firebaseio.com');
+app.constant('API_URL', 'https://yourfilmagenda.firebaseio.com/');

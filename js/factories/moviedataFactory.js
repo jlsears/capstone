@@ -18,9 +18,10 @@ app.factory('MovieData', ['$http','API_URL', function ($http, API_URL) {
     function deleteMovieData(id, moviedata, cb) {
       console.log(id);
       console.log(moviedata);
+      console.log(`${API_URL}/moviedatas/${id}/' + moviedata + '.json`);
       $http
-        .delete(`${API_URL}/moviedatas/${id}/moviedata.json`)
-        .success(function(){alert('it worked!!');});
+        .delete(`${API_URL}/moviedatas/${id}/' + moviedata + '.json`)
+        .success(cb);
     }
     return {addMovieData:addMovieData, getMyMovieData:getMyMovieData, getAll:getAll, deleteMovieData:deleteMovieData};
   }]);
