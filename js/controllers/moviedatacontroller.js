@@ -16,16 +16,20 @@
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
         seenstatus: $scope.seenstatus
-        //tosee: $scope.tosee
       });
       console.log('movie data added!!');
-
-      //   .then(function(ref) {
-      //   var id = ref.key();
-      //   console.log("added record with id " + id);
-      //   list.$indexFor(id); // returns location in the array
-      // });
     };
+
+    $scope.movielisting = movieListing;
+
+    // var getList = function() {
+    //   var id = $rootScope.auth.uid.replace(':', '%3A');
+    //   MovieListing.getMyMovieData(id, function (moviedatas) {
+    //     console.log(moviedatas);
+    //     return $scope.moviedatas = moviedatas;
+    //   });
+    // };
+    // getList();
 
     $scope.deleteMovieData = function(moviedata) {
       var id = $rootScope.auth.uid.replace(':', '%3A');

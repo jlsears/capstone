@@ -1,11 +1,12 @@
 <h1>Have Seen List</h1>
-<div class='row' ng-repeat='moviedata in moviedatas'>
-  <div class="col-xs-2">{{moviedata.title}}</div>
-  <div class="col-xs-2">{{moviedata.director}}</div>
-  <div class="col-xs-2">{{moviedata.theater}}</div>
-  <div class="col-xs-2">{{moviedata.moviegoers}}</div>
-  <div class="col-xs-2">
+<div class='row' ng-repeat='movie in movielisting'>
+  <div class="col-xs-2">{{movie.title}}</div>
+  <div class="col-xs-2">{{movie.director}}</div>
+  <div class="col-xs-2">{{movie.theater}}</div>
+  <div class="col-xs-2">{{movie.moviegoers}}</div>
+  <div class="col-xs-2">{{movie.seenstatus}}</div>
+  <div class="col-xs-1">
     <button type='button' ng-click="deleteMovieData(moviedata)">Delete</button>
   </div>
-  <div class="col-xs-2"></div>
+  <div class="col-xs-1"></div>
 </div>
