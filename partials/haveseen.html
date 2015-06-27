@@ -1,5 +1,5 @@
 <h1>Have Seen List</h1>
-<div class='row' ng-repeat='movie in movielisting'>
+<div class='row' ng-repeat='movie in movielisting' ng-if='movie.haveseen'>
   <div class="col-xs-2">{{movie.title}}</div>
   <div class="col-xs-2">{{movie.director}}</div>
   <div class="col-xs-2">{{movie.theater}}</div>

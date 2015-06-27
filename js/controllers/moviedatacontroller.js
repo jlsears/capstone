@@ -22,14 +22,6 @@
 
     $scope.movielisting = movieListing;
 
-    // var getList = function() {
-    //   var id = $rootScope.auth.uid.replace(':', '%3A');
-    //   MovieListing.getMyMovieData(id, function (moviedatas) {
-    //     console.log(moviedatas);
-    //     return $scope.moviedatas = moviedatas;
-    //   });
-    // };
-    // getList();
 
     $scope.deleteMovieData = function(moviedata) {
       var id = $rootScope.auth.uid.replace(':', '%3A');
