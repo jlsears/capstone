@@ -18,13 +18,25 @@
       <input id="moviegoers" type='text' ng-model='moviegoers' name="moviegoers"/>
     </div>
     <div>
-      <label class="">To See</label> <br>
-      <input id="tosee" type='checkbox' ng-model='tosee' name="tosee"/>
+<!--       <label class="">To See</label> <br>
+      <input id="tosee" type='checkbox' ng-model='seenit.tosee' ng-true-value="'Yeppers'" ng-false-value="'Nope'" name="tosee"/>
     </div>
     <div>
       <label class="">Have Seen</label> <br>
-      <input id="haveseen" type='checkbox' ng-model='haveseen' name="haveseen"/>
+      <input id="haveseen" type='checkbox' ng-model='seenit.haveseen' name="haveseen"/>
     </div>
+ -->
+      <label>
+        <input type="radio" ng-model='seenstatus' name="seenstatus" id="haveseen" ng-value='true'>
+          Have Seen
+      </label>
+      <label>
+        <input type="radio" ng-model='seenstatus' name="seenstatus" id="tosee" ng-value='false'>
+          To See
+      </label> <br>
+    </div>
+
+
     <button type='submit'class='btn btn-warning'>Submit</button>
   </form>
 </div>

@@ -7,15 +7,16 @@
     //movieRef.$bindTo($scope, "movieinfo");
 
 
+
     $scope.addMovieData = function() {
-      //var id = $rootScope.auth.uid.replace(':', '%3A');
+
       movieListing.$add({
         title: $scope.title,
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
-        tosee: $scope.tosee,
-        haveseen: $scope.haveseen
+        seenstatus: $scope.seenstatus
+        //tosee: $scope.tosee
       });
       console.log('movie data added!!');
 
