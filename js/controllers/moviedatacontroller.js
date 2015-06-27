@@ -2,28 +2,29 @@
 
     var movieRef = new Firebase('https://yourfilmagenda.firebaseio.com/movieinfo');
 
-    $scope.movieListing = $firebaseArray(movieRef);
+    var movieListing = $firebaseArray(movieRef);
 
-    movieRef.$bindTo($scope, "movieinfo");
+    //movieRef.$bindTo($scope, "movieinfo");
 
 
     $scope.addMovieData = function() {
-      $scope.movieListing.$add({
-      // var id = $rootScope.auth.uid.replace(':', '%3A');
-      // MovieData.addMovieData(id, $scope.newMovieData, function () {
-      //   console.log('Movie entry created!!!')
-      //   $scope.newMovieData = {};
+      //var id = $rootScope.auth.uid.replace(':', '%3A');
+      movieListing.$add({
+        title: $scope.title,
+        director: $scope.director,
+        theater: $scope.theater,
+        moviegoers: $scope.moviegoers,
+        tosee: $scope.tosee,
+        haveseen: $scope.haveseen
       });
-    };
+      console.log('movie data added!!');
 
-    var getList = function() {
-      var id = $rootScope.auth.uid.replace(':', '%3A');
-      MovieData.getMyMovieData(id, function (moviedatas) {
-        console.log(moviedatas);
-        return $scope.moviedatas = moviedatas;
-      });
+      //   .then(function(ref) {
+      //   var id = ref.key();
+      //   console.log("added record with id " + id);
+      //   list.$indexFor(id); // returns location in the array
+      // });
     };
-    getList();
 
     $scope.deleteMovieData = function(moviedata) {
       var id = $rootScope.auth.uid.replace(':', '%3A');

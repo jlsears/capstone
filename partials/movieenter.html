@@ -1,30 +1,30 @@
 <h1>Movie Enter Page</h1>
 <div>
-  <form role='form' novalidate='novalidate' name='movieForm'>
+  <form role='form' novalidate='novalidate' ng-submit='addMovieData()' name='movieForm'>
     <div class='form-group'>
       <label class="">Title</label> <br>
-      <input id="title" type='text' ng-model='newMovieData.title' name="title"/>
+      <input id="title" type='text' ng-model='title' name="title"/>
     </div>
     <div>
       <label class="">Director</label> <br>
-      <input id="director" type='text' ng-model='newMovieData.director' name="director"/>
+      <input id="director" type='text' ng-model='director' name="director"/>
     </div>
     <div>
       <label class="">Theater</label> <br>
-      <input id="theater" type='text' ng-model='newMovieData.theater' name="theater"/>
+      <input id="theater" type='text' ng-model='theater' name="theater"/>
     </div>
     <div>
       <label class="">Fellow Moviegoers</label> <br>
-      <input id="moviegoers" type='text' ng-model='newMovieData.moviegoers' name="moviegoers"/>
+      <input id="moviegoers" type='text' ng-model='moviegoers' name="moviegoers"/>
     </div>
     <div>
       <label class="">To See</label> <br>
-      <input id="tosee" type='checkbox' ng-model='newMovieData.tosee' name="tosee"/>
+      <input id="tosee" type='checkbox' ng-model='tosee' name="tosee"/>
     </div>
     <div>
       <label class="">Have Seen</label> <br>
-      <input id="haveseen" type='checkbox' ng-model='newMovieData.haveseen' name="haveseen"/>
+      <input id="haveseen" type='checkbox' ng-model='haveseen' name="haveseen"/>
     </div>
-    <button ng-click='addMovieData()' class='btn btn-warning'>Submit</button>
+    <button type='submit'class='btn btn-warning'>Submit</button>
   </form>
 </div>
