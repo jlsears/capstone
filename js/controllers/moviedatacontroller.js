@@ -6,8 +6,6 @@
 
     //movieRef.$bindTo($scope, "movieinfo");
 
-
-
     $scope.addMovieData = function() {
 
       movieListing.$add({
@@ -22,15 +20,13 @@
 
     $scope.movielisting = movieListing;
 
+    $scope.showListDataBtn = function() {
+      $scope.showEditFields = false; 
+      $scope.showListData = true;}
 
-    $scope.deleteMovieData = function(moviedata) {
-      var id = $rootScope.auth.uid.replace(':', '%3A');
-      MovieData.deleteMovieData(id, moviedata, function () {
-        console.log(moviedata);
-        console.log("Delete button clicked!");
-        getList();
-      })
-    }
+    $scope.showEditFieldsBtn = function() {
+      $scope.showEditFields = true; 
+      $scope.showListData = false;}
 
   }]);
 
