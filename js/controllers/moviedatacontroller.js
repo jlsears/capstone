@@ -1,6 +1,8 @@
-  app.controller('MovieDataCtrl', ['$rootScope', '$scope', 'MovieData', '$firebaseArray', function ($rootScope, $scope, MovieData, $firebaseArray){
+  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', 'MovieData', '$firebaseArray', function ($rootScope, $scope, $location, MovieData, $firebaseArray){
 
-    var movieRef = new Firebase('https://yourfilmagenda.firebaseio.com/movieinfo');
+    var id = $rootScope.auth.uid.replace(':', '%3A');
+    
+    var movieRef = new Firebase('https://yourfilmagenda.firebaseio.com/movieinfo' + id);
 
     var movieListing = $firebaseArray(movieRef);
 
@@ -9,7 +11,6 @@
     $scope.movielisting = movieListing;
 
     $scope.addMovieData = function() {
-
       movieListing.$add({
         title: $scope.title,
         director: $scope.director,
@@ -17,6 +18,7 @@
         moviegoers: $scope.moviegoers,
         seenstatus: $scope.seenstatus
       });
+      $location.path('/menu');
       console.log('movie data added!!');
     };
 
