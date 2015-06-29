@@ -6,6 +6,8 @@
 
     //movieRef.$bindTo($scope, "movieinfo");
 
+    $scope.movielisting = movieListing;
+
     $scope.addMovieData = function() {
 
       movieListing.$add({
@@ -18,7 +20,10 @@
       console.log('movie data added!!');
     };
 
-    $scope.movielisting = movieListing;
+      movieListing.$watch(function(event) {
+        console.log(event);
+      });
+
 
     $scope.showListDataBtn = function() {
       $scope.showEditFields = false; 
