@@ -25,23 +25,23 @@
     </div>
     <div>
       <label class="">Director</label> <br>
-      <input id="director" type='text' ng-model='movie.director' name="director"/>
+      <input id="director" type='text' ng-model='movie.director' ng-change="movielisting.$save(movie)" name="director"/>
     </div>
     <div>
       <label class="">Theater</label> <br>
-      <input id="theater" type='text' ng-model='movie.theater' name="theater"/>
+      <input id="theater" type='text' ng-model='movie.theater' ng-change="movielisting.$save(movie)" name="theater"/>
     </div>
     <div>
       <label class="">Fellow Moviegoers</label> <br>
-      <input id="moviegoers" type='text' ng-model='movie.moviegoers' name="moviegoers"/>
+      <input id="moviegoers" type='text' ng-model='movie.moviegoers' ng-change="movielisting.$save(movie)" name="moviegoers"/>
     </div>
     <div>
       <label>
-        <input type="radio" ng-model='movie.seenstatus' name="seenstatus" id="haveseen" ng-value='true'>
+        <input type="radio" ng-model='movie.seenstatus' ng-change="movielisting.$save(movie)" name="seenstatus" id="haveseen" ng-value='true'>
           Have Seen
       </label>
       <label>
-        <input type="radio" ng-model='movie.seenstatus' name="seenstatus" id="tosee" ng-value='false'>
+        <input type="radio" ng-model='movie.seenstatus' ng-change="movielisting.$save(movie)" name="seenstatus" id="tosee" ng-value='false'>
           To See
       </label> <br>
     </div>
