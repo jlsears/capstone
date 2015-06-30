@@ -39,7 +39,7 @@
       $scope.movie = movie;
     }
 
-    $scope.submitThis = function() {
+    $scope.submitThis = function(movie) {
       movieListing.$save({
         title: $scope.title,
         director: $scope.director,
