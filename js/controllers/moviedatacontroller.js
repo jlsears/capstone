@@ -26,14 +26,18 @@
         console.log(event);
       });
 
+    $scope.showListData = true;
 
     $scope.showListDataBtn = function() {
       $scope.showEditFields = false; 
-      $scope.showListData = true;}
+      $scope.showListData = true;
+    }
 
     $scope.showEditFieldsBtn = function() {
       $scope.showEditFields = true; 
-      $scope.showListData = false;}
+      $scope.showListData = false;
+      $scope.movie = movie;
+    }
 
   }]);
 
