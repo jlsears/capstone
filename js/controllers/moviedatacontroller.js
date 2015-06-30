@@ -33,11 +33,24 @@
       $scope.showListData = true;
     }
 
-    $scope.showEditFieldsBtn = function() {
+    $scope.showEditFieldsBtn = function(movie) {
       $scope.showEditFields = true; 
       $scope.showListData = false;
       $scope.movie = movie;
     }
+
+    $scope.submitThis = function() {
+      movieListing.$save({
+        title: $scope.title,
+        director: $scope.director,
+        theater: $scope.theater,
+        moviegoers: $scope.moviegoers,
+        seenstatus: $scope.seenstatus
+      });
+      $scope.showEditFields = false; 
+      $scope.showListData = true;
+      console.log('movie data edited!!');
+    };
 
   }]);
 
