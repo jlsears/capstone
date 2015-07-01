@@ -1,1 +1,48 @@
-<h1>Fave performers view</h1>
+<div ng-show='showListData'>
+  <h1>Fave Artists List</h1>
+  <div class='row' ng-repeat='artist in artistlisting'>
+    <div class="col-xs-5">{{artist.name}}</div>
+    <div class="col-xs-5">{{artist.artist_type}}</div>
+    <div class="col-xs-1">
+      <button type='button' ng-click="artistlisting.$remove(artist)">Delete</button>
+    </div>
+    <div class="col-xs-1">
+      <button type='button' ng-click="showEditFieldsBtn(artist)">Edit</button>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+</div>
+
+<!-- <div ng-show='showEditFields'>
+<h1>Edit Movie Data</h1>
+  <form role='form' novalidate='novalidate' ng-submit='submitThis(movie)' name='editForm'>
+    <div class='form-group'>
+      <label class="">Title</label> <br>
+      <input id="title" type='text' ng-model='movie.title' ng-change="movielisting.$save(movie)" name="title" value='movie.title' />
+    </div>
+    <div>
+      <label class="">Director</label> <br>
+      <input id="director" type='text' ng-model='movie.director' ng-change="movielisting.$save(movie)" name="director"/>
+    </div>
+    <div>
+      <label class="">Theater</label> <br>
+      <input id="theater" type='text' ng-model='movie.theater' ng-change="movielisting.$save(movie)" name="theater"/>
+    </div>
+    <div>
+      <label class="">Fellow Moviegoers</label> <br>
+      <input id="moviegoers" type='text' ng-model='movie.moviegoers' ng-change="movielisting.$save(movie)" name="moviegoers"/>
+    </div>
+    <div>
+      <label>
+        <input type="radio" ng-model='movie.seenstatus' ng-change="movielisting.$save(movie)" name="seenstatus" id="haveseen" ng-value='true'>
+          Have Seen
+      </label>
+      <label>
+        <input type="radio" ng-model='movie.seenstatus' ng-change="movielisting.$save(movie)" name="seenstatus" id="tosee" ng-value='false'>
+          To See
+      </label> <br>
+    </div>
+
+    <button type='submit'class='btn btn-warning'>Submit</button>
+  </form>
+</div> -->
