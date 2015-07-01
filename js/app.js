@@ -30,6 +30,10 @@ app.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'partials/movieenter.html',
       controller: 'MovieDataCtrl'
     }).
+    when('/artistenter', {
+      templateUrl: 'partials/artistenter.html',
+      controller: 'PerformerCtrl'
+    }).
     when('/haveseen', {
       templateUrl: 'partials/haveseen.html',
       controller: 'MovieDataCtrl'

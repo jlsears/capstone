@@ -1,4 +1,4 @@
-  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', 'MovieData', '$firebaseArray', function ($rootScope, $scope, $location, MovieData, $firebaseArray){
+  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', function ($rootScope, $scope, $location, $firebaseArray){
 
     var id = $rootScope.auth.uid.replace(':', '%3A');
     
