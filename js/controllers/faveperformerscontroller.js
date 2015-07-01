@@ -39,7 +39,7 @@
     $scope.submitThis = function(artist) {
       artistListing.$save({
         name: $scope.name,
-        artistType: $scope.artistType
+        artist_type: $scope.artist_type
       });
       $scope.showEditFields = false; 
       $scope.showListData = true;
