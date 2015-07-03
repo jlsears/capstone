@@ -1,27 +1,25 @@
-// app.factory('MovieData', ['$http','API_URL', function ($http, API_URL) {
-  //   function addMovieData(id, themovie, cb) {
-  //     $http
-  //       .post(`${API_URL}/moviedatas/${id}.json`, themovie)
-  //       .success(cb);
-  //   }
-  //   function getMyMovieData(id, cb) {
-  //     $http
-  //       .get(`${API_URL}/moviedatas/${id}.json`)
-  //       .success(cb)
-  //       .error(function(data, error) { console.log(error); });
-  //   }
-  // function getAll(cb) {
-  //   $http
-  //     .get(`${API_URL}themovie.json`)
-  //     .success(cb);
-  // }
-  //   function deleteMovieData(id, moviedata, cb) {
-  //     console.log(id);
-  //     console.log(moviedata);
-  //     console.log(`${API_URL}/moviedatas/${id}/' + moviedata + '.json`);
-  //     $http
-  //       .delete(`${API_URL}/moviedatas/${id}/' + moviedata + '.json`)
-  //       .success(cb);
-  //   }
-  //   return {addMovieData:addMovieData, getMyMovieData:getMyMovieData, getAll:getAll, deleteMovieData:deleteMovieData};
-  // }]);
+app.factory('Movie', ['$http', 'API_URL', function($http, API_URL){
+  function addMovie(id, movie, cb){
+    $http
+      .post(`${API_URL}movieinfo/${id}.json`, movie)
+      .success(cb);
+  }
+  function getMyMovies(id, cb){
+    $http
+      .get(`${API_URL}movieinfo/${id}.json`)
+      .success(cb);
+  }
+  function deleteMovie(id, movieId, cb){
+    $http
+      .delete(`${API_URL}movieinfo/${id}/${movieId}.json`)
+      .success(cb);
+  }
+
+  function editMovie(id, movieId, movie, cb){
+    console.log('hit the edit factory')
+    $http
+      .put(`${API_URL}movieinfo/${id}/${movieId}.json`, movie)
+      .success(cb);
+  }
+  return{addMovie:addMovie, getMyMovies:getMyMovies, deleteMovie:deleteMovie, editMovie:editMovie}
+}])

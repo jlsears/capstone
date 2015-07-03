@@ -46,6 +46,13 @@
       console.log('artist data edited!!');
     };
 
+  $scope.getArtistInfo=function(artist){
+    wu.getArtistInfo($scope.artist_name).then(function(response){
+      console.log(response.data);
+      $scope.project = response.data.title;
+    })
+  }
+
   }]);
 
 

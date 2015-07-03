@@ -1,30 +1,63 @@
-  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', function ($rootScope, $scope, $location, $firebaseArray){
+  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', 'Movie', function ($rootScope, $scope, $location, $firebaseArray, Movie){
 
     var id = $rootScope.auth.uid.replace(':', '%3A');
     
-    var movieRef = new Firebase('https://yourfilmagenda.firebaseio.com/movieinfo' + id);
+    //var movieRef = new Firebase('https://yourfilmagenda.firebaseio.com/movieinfo');
 
-    var movieListing = $firebaseArray(movieRef);
+    //var movieListing = $firebaseArray(movieRef);
 
     //movieRef.$bindTo($scope, "movieinfo");
 
-    $scope.movielisting = movieListing;
+    $scope.movielisting = [];
+    Movie.getMyMovies(id, function(movies){
+      $scope.movielisting =movies;
+      console.log($scope.movielisting)
+      $scope.keys = Object.keys($scope.movielisting)
+    })
+    
 
     $scope.addMovieData = function() {
-      movieListing.$add({
+      var newMovie = {
         title: $scope.title,
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
         seenstatus: $scope.seenstatus
-      });
-      $location.path('/menu');
-      console.log('movie data added!!');
+      };
+      Movie.addMovie(id, newMovie, function(){
+        $location.path('/menu');
+        console.log('movie data added!!');
+      })
     };
 
-      movieListing.$watch(function(event) {
-        console.log(event);
-      });
+    $scope.deleteAMovie = function(movieId){
+      console.log(movieId)
+      Movie.deleteMovie(id, movieId, function(){
+        console.log('movie deleted')
+        $location.path('/haveseen')
+      })
+    }
+
+    $scope.editAMovie = function(movieId){
+      console.log('title', $scope.title)
+      console.log('movie title', $scope.movie.title)
+      var changedMovie = {
+        title: $scope.title,
+        director: $scope.director,
+        theater: $scope.theater,
+        moviegoers: $scope.moviegoers,
+        seenstatus: $scope.seenstatus
+      };
+      Movie.editMovie(id, movieId, changedMovie, function(){
+        $scope.showEditFields = false; 
+        $scope.showListData = true;
+        console.log('movie edited');
+      })
+    }
+
+      // movieListing.$watch(function(event) {
+      //   console.log(event);
+      // });
 
     $scope.showListData = true;
 
@@ -52,6 +85,7 @@
       console.log('movie data edited!!');
     };
 
+ 
   }]);
 
 

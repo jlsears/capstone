@@ -28,3 +28,22 @@
     <button type='submit'class='btn btn-warning'>Submit</button>
   </form>
 </div>
+
+<div class="container">
+  <div class="touch-up">
+    <h4>{{message}}</h4>
+
+    <form>
+      
+      <label class="artist_name">Enter an artists name here:</label> <br>
+      <input id="zip" ng-model="artist_name" name="artist_name">
+      <button ng-click='getArtistInfo()' class=''>Submit</button>
+
+    </form>
+
+
+    <h1>Artist projects include:</h1>
+    <h1>{{project}}</h1>
+
+  </div>
+</div>
