@@ -1,20 +1,69 @@
-<div ng-show='showListData'>
-  <h1>Have Seen List</h1>
-  <div class='row' ng-repeat='movie in movielisting track by $index' ng-if='movie.seenstatus'>
-    <div class="col-xs-2">{{movie.title}}</div>
-    <div class="col-xs-2">{{movie.director}}</div>
-    <div class="col-xs-2">{{movie.theater}}</div>
-    <div class="col-xs-2">{{movie.moviegoers}}</div>
-    <div class="col-xs-1">{{movie.seenstatus}}</div>
-    <div class="col-xs-1">
-      <button type='button' ng-click="deleteAMovie(keys[$index])">Delete </button>
-    </div>
-    <div class="col-xs-1">
-      <button type='button' ng-click="showEditFieldsBtn(movie)">Edit</button>
-    </div>
-    <div class="col-xs-1"></div>
+<div id="banner-photo">
+  <div>
+    <p class='circle-icon'><span class="glyphicon glyphicon-ok"></span></p>
   </div>
 </div>
+
+
+<div class='view-body' ng-show='showListData'>
+  <div class='data-holder'>
+    <h1>Films You've Seen</h1>
+
+    <table class='table'>
+      <thead class='table-header'>
+            <td>Title</td>
+            <td>Director</td>
+            <td>Theater</td>
+            <td>Moviegoers</td>
+            <td>Date</td>
+            <td>Response</td>
+            <td>Delete</td>
+            <td>Edit</td>
+      </thead>
+      <tbody>
+        <tr ng-repeat='movie in movielisting track by $index' ng-if='movie.seenstatus'>
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.theater}}</td>
+            <td>{{movie.moviegoers}}</td>
+            <td>{{movie.date}}</td>
+            <td>{{movie.response}}</td>
+            <td><button type='button' class="btn btn-success" ng-click="deleteAMovie(keys[$index])"><span class="glyphicon glyphicon-trash"></span></button></td>
+            <td><button type='button' class="btn btn-success" ng-click="showEditFieldsBtn(movie)"><span class="glyphicon glyphicon-pencil"></span></button></td>
+        </tr>
+      </tobdy>
+
+    </table>
+
+
+
+<!--     <div class='row table-header'>
+      <div class="col-xs-2">Title</div>
+      <div class="col-xs-2">Director</div>
+      <div class="col-xs-2">Theater</div>
+      <div class="col-xs-2">Moviegoers</div>
+      <div class="col-xs-1">Date</div>
+      <div class="col-xs-1">Response</div>
+      <div class="col-xs-1"></div>
+      <div class="col-xs-1"></div>
+    </div>
+
+    <div class='row table-polish' ng-repeat='movie in movielisting track by $index' ng-if='movie.seenstatus'>
+      <div class="col-xs-2">{{movie.title}}</div>
+      <div class="col-xs-2">{{movie.director}}</div>
+      <div class="col-xs-2">{{movie.theater}}</div>
+      <div class="col-xs-2">{{movie.moviegoers}}</div>
+      <div class="col-xs-1">{{movie.date}}</div>
+      <div class="col-xs-1">{{movie.response}}</div>
+      <div class="col-xs-1">
+        <button type='button' class="btn btn-success" ng-click="deleteAMovie(keys[$index])">Delete </button>
+      </div>
+      <div class="col-xs-1">
+        <button type='button' class="btn btn-success" ng-click="showEditFieldsBtn(movie)">Edit</button>
+      </div>
+    </div>
+  </div>
+</div> -->
 
 <div ng-show='showEditFields'>
 <h1>Edit Movie Data</h1>

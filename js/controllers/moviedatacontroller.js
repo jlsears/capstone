@@ -22,6 +22,8 @@
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
+        date: $scope.date,
+        response: $scope.response,
         seenstatus: $scope.seenstatus
       };
       Movie.addMovie(id, newMovie, function(){
@@ -34,7 +36,7 @@
       console.log(movieId)
       Movie.deleteMovie(id, movieId, function(){
         console.log('movie deleted')
-        $location.path('/haveseen')
+        $location.path('/menu')
       })
     }
 
@@ -46,9 +48,11 @@
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
+        date: $scope.date,
+        response: $scope.response,
         seenstatus: $scope.seenstatus
       };
-      Movie.editMovie(id, movieId, changedMovie, function(){
+      Movie.editAMovie(id, movieId, changedMovie, function(){
         $scope.showEditFields = false; 
         $scope.showListData = true;
         console.log('movie edited');
@@ -78,6 +82,8 @@
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
+        date: $scope.date,
+        response: $scope.response,
         seenstatus: $scope.seenstatus
       });
       $scope.showEditFields = false; 
