@@ -88,10 +88,6 @@ MENU PAGE
   padding-left: 13%;
 }
 
-.inside {
-  /*width: 50%;*/
-}
-
 .lefty {
   float: left;
 }
@@ -117,11 +113,20 @@ MENU PAGE
   padding-top: 60px;
 }
 
-.enter-data {
-  background-color: red;
-  color: white;
-  width: 50px;
-  height: 20px;
+.entering-row {
+  width: 580px;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding-left: 15%;
+  border-bottom: #989898 1px solid;
+}
+
+.enter-data a {
+  color: #989898;
+}
+
+this-menu {
+  width: 683px;
 }
 
 
@@ -263,6 +268,15 @@ HEADER
   padding-top: 0px;
 }
 
+.data-holder-enter {
+  background-color: white;
+  width: 90%;
+  height: 800px;
+  display: inline-block;
+  background-color: white;
+  padding-top: 50px;
+}
+
 .data-holder-sm {
   background-color: white;
   width: 90%;
@@ -275,7 +289,7 @@ HEADER
 .data-holder-m {
   background-color: white;
   width: 90%;
-  height: 500px;
+  height: 600px;
   display: inline-block;
   background-color: white;
   padding-top: 50px;
@@ -309,4 +323,43 @@ HEADER
   width: 75%;
   margin-bottom: 20px;
   margin: 0 auto;
+}
+
+/*******************
+FORMS
+*******************/
+
+form-shorten {
+  width: 60%;
+  background-color: green;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.make-orange {
+  background-color: orange;
+  color: white;
+  padding-left: 2px;
+  border-radius: 2px;
+}
+
+.style-form {
+  display: inline-block;
+  width: 35%;
+  border: 2px #686868 solid;
+  text-align: left;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.orange-words {
+  color: orange;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.give-tenpx {
+  margin-top: 10px;
 }

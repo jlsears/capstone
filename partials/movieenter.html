@@ -1,42 +1,65 @@
-<div class='data-holder'>
-<h1>Movie Enter Page</h1>
-  <form role='form' novalidate='novalidate' ng-submit='addMovieData()' name='movieForm'>
-    <div class='form-group'>
-      <label class="">Title</label> <br>
-      <input id="title" type='text' ng-model='title' name="title"/>
-    </div>
+<div class='view-body'>
+  <div class='data-holder-enter'>
+  <h2>Add a New Movie</h2>
     <div>
-      <label class="">Director</label> <br>
-      <input id="director" type='text' ng-model='director' name="director"/>
-    </div>
-    <div>
-      <label class="">Theater</label> <br>
-      <input id="theater" type='text' ng-model='theater' name="theater" ng-value="null"/>
-    </div>
-    <div>
-      <label class="">Fellow Moviegoers</label> <br>
-      <input id="moviegoers" type='text' ng-model='moviegoers' name="moviegoers"/>
-    </div>
-    <div>
-      <label class="">Date</label> <br>
-      <input id="date" type='text' ng-model='date' name="date"/>
-    </div>
-    <div>
-      <label class="">Response</label> <br>
-      <input id="response" type='text' ng-model='response' name="response"/>
-    </div>
-    <div>
-      <label>
-        <input type="radio" ng-model='seenstatus' name="seenstatus" id="haveseen" ng-value='true'>
-          Have Seen
-      </label>
-      <label>
-        <input type="radio" ng-model='seenstatus' name="seenstatus" id="tosee" ng-value='false'>
-          To See
-      </label> <br>
-    </div>
+    <form role='form' class='style-form' novalidate='novalidate' ng-submit='addMovieData()' name='movieForm'>
+
+      <div class='form-group make-orange'>
+        <label class="">Title</label> <br>
+      </div>
+      <div>
+        <input id="title" class='form-control' type='text' ng-model='title' name="title"/>
+      </div>
+
+      <div class='form-group make-orange'>
+        <label class="">Director</label> <br>
+      </div>
+      <div>
+        <input id="director" class='form-control' type='text' ng-model='director' name="director"/>
+      </div>
+
+      <div class='form-group make-orange'>
+        <label>Theater</label> <br>
+      </div>
+      <div>
+        <input id="theater" class='form-control' type='text' ng-model='theater' name="theater" ng-value="null"/>
+      </div>
+
+      <div class='form-group make-orange'>
+        <label>Fellow Moviegoers</label> <br>
+      </div>
+      <div>
+        <input id="moviegoers" class='form-control' type='text' ng-model='moviegoers' name="moviegoers"/>
+      </div>
+
+      <div class='form-group make-orange'>
+        <label>Date</label> <br>
+      </div>
+      <div>
+        <input id="date" class='form-control' type='text' ng-model='date' name="date"/>
+      </div>
+
+      <div class='form-group make-orange'>
+        <label>Response</label> <br>
+      </div>
+      <div>
+        <input id="response" class='form-control' type='text' ng-model='response' name="response"/>
+      </div>
+
+      <div>
+        <label>
+          <input type="radio" ng-model='seenstatus' name="seenstatus" id="haveseen" ng-value='true'>
+            Have Seen
+        </label> <br>
+        <label>
+          <input type="radio" ng-model='seenstatus' name="seenstatus" id="tosee" ng-value='false'>
+            To See
+        </label> <br>
+      </div>
 
 
-    <button type='submit'class='btn btn-warning'>Submit</button>
-  </form>
+      <button type='submit'class='btn btn-success give-tenpx'>Submit</button>
+    </form>
+    </div>
+  </div>
 </div>
