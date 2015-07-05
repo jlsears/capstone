@@ -8,6 +8,13 @@
 
     //movieRef.$bindTo($scope, "movieinfo");
 
+    // var showNavBar = function() {
+    //   $scope.displayNav = true;
+    // };
+
+    // showNavBar();
+
+
     $scope.movielisting = [];
     Movie.getMyMovies(id, function(movies){
       $scope.movielisting =movies;

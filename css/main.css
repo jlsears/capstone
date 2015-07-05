@@ -55,6 +55,10 @@ HOME PAGE
 MENU PAGE
 ****************************/
 
+.menu-body {
+  background-color: black;
+}
+
 #menu-theater {
   position: fixed;
   top: -50%;
@@ -74,48 +78,137 @@ MENU PAGE
   min-height: 50%;
 }
 
-holder-div {
-  /*height: 400px;*/
-  width: 50%;
-  background-color: #FFFFFF; opacity: 0.75; filter: alpha(opacity=50);
+.holder-div {
+  height: 600px;
+  width: 45%;
+  /*background-color: #FFFFFF; opacity: 0.75; filter: alpha(opacity=50);*/
   /*position: absolute;*/
   margin: 0 auto;
   display: inline-block;
   /*margin-top: 15%;*/
   padding-bottom: 15px;
+  margin-top: 14%;
+  padding-left: 13%;
 }
 
 .inside {
-  width: ;
+  /*width: 50%;*/
 }
 
 .lefty {
   float: left;
 }
 
-.box {
-  height: 100px;
-  width: 100px;
-/*  margin: 5px;*/
-  padding: 20px;
-  background-color: black; opacity: 0.75; filter: alpha(opacity=50);
+.row {
+  margin-right: -15px;
+  margin-left: 0px;
+  position: relative;
   color: white;
+}
+
+.box {
+  height: 180px;
+  width: 180px;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  background-color: black; opacity: 0.45; filter: alpha(opacity=40);
+  /*color: white;*/
+  padding-top: 60px;
+}
+
+
+/*******************************
+BOXES WITH BACKGROUND IMAGES
+*******************************/
+
+.box1 {
+  background-image: url('../images/box1.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+}
+
+.box2 {
+  background-image: url('../images/box2.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+}
+
+.box3 {
+  background-image: url('../images/box3.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box4 {
+  background-image: url('../images/box4.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box5 {
+  background-image: url('../images/box5.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box6 {
+  background-image: url('../images/box6.jpg');
+  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.box img {
+
 }
 
 .box a {
   color: white;
+  font-size: 18px;
 }
+
+
+/*******************
+NAVBAR
+*******************/
+
+top-holder {
+  background-color: #808080;
+  padding-bottom: 20px;
+}
+
+.nav-container {
+  width: 75%;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #F0F0F0; /*opacity: 0.75; filter: alpha(opacity=50);*/
+}
+
+.fa-head {
+  margin-right: 20px;
+  font-size: 19px;
+}
+
+.head-links {
+  float: right;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #449d44;
+}
+
 
 /*******************
 HEADER
 *******************/
 
 #banner-photo {
-  margin-top: 17px;
-  background-image: url('../images/theater_cropped.jpg');
-  height: 208px;
+  background-image: url('../images/belcourt_banner.jpg');
+  height: 258px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border-bottom: 3px solid #DC4C18;
   background-color: black;
 }
