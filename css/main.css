@@ -96,6 +96,10 @@ MENU PAGE
   float: left;
 }
 
+.righty {
+  float: right;
+}
+
 .row {
   margin-right: -15px;
   margin-left: 0px;
@@ -111,6 +115,13 @@ MENU PAGE
   background-color: black; opacity: 0.45; filter: alpha(opacity=40);
   /*color: white;*/
   padding-top: 60px;
+}
+
+.enter-data {
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 20px;
 }
 
 
@@ -245,11 +256,29 @@ HEADER
 
 .data-holder {
   background-color: white;
-  width: 70%;
+  width: 90%;
   height: 800px;
   display: inline-block;
   background-color: white;
   padding-top: 0px;
+}
+
+.data-holder-sm {
+  background-color: white;
+  width: 90%;
+  height: 400px;
+  display: inline-block;
+  background-color: white;
+  padding-top: 50px;
+}
+
+.data-holder-m {
+  background-color: white;
+  width: 90%;
+  height: 500px;
+  display: inline-block;
+  background-color: white;
+  padding-top: 50px;
 }
 
 .data-holder h1 {
@@ -263,16 +292,21 @@ HEADER
 
 .haveseen-table {
   width: 95%;
-  max-width: 100%;
-  margin-bottom: 20px;
-  margin: 0 auto;
-  display: inline-block;
-}
-
-.tosee-table {
-  width: 45%;
   /*max-width: 100%;*/
   margin-bottom: 20px;
   margin: 0 auto;
   display: inline-block;
+  margin-left: 15%;
+}
+
+.tosee-table {
+  width: 75%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+}
+
+.artist-table {
+  width: 75%;
+  margin-bottom: 20px;
+  margin: 0 auto;
 }

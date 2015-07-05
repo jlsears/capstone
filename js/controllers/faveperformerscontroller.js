@@ -1,27 +1,37 @@
-  app.controller('PerformerCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', function ($rootScope, $scope, $location, $firebaseArray){
+  app.controller('PerformerCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', 'Artist', function ($rootScope, $scope, $location, $firebaseArray, Artist){
 
     var id = $rootScope.auth.uid.replace(':', '%3A');
     
-    var artistRef = new Firebase('https://yourfilmagenda.firebaseio.com/artistinfo' + id);
+    // var artistRef = new Firebase('https://yourfilmagenda.firebaseio.com/artistinfo' + id);
 
-    var artistListing = $firebaseArray(artistRef);
+    // var artistListing = $firebaseArray(artistRef);
 
-    //movieRef.$bindTo($scope, "movieinfo");
-
-    $scope.artistlisting = artistListing;
+    $scope.artistlisting = [];
+    Artist.getMyArtists(id, function(artists){
+      $scope.artistlisting = artists;
+      console.log($scope.artistlisting)
+      $scope.keys = Object.keys($scope.artistlisting)
+    })
 
     $scope.addArtistData = function() {
-      artistListing.$add({
+      var newArtist = {
         name: $scope.name,
         artist_type: $scope.artist_type
-      });
-      $location.path('/menu');
-      console.log('artist data added!!');
+      };
+      Artist.addArtist(id, newArtist, function(){
+        $location.path('/menu');
+        console.log('artist data added!!');        
+      })
     };
 
-      artistListing.$watch(function(event) {
-        console.log(event);
-      });
+    $scope.deleteAnArtist = function(artistId){
+      console.log(artistId)
+      Artist.deleteArtist(id, artistId, function(){
+        console.log('artist deleted')
+        $location.path('/menu')
+      })
+    }
+
 
     $scope.showListData = true;
 
