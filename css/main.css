@@ -31,23 +31,20 @@ HOME PAGE
   height: 90px;
   width: 380px;
   background-color: #CF5300; opacity: 0.75; filter: alpha(opacity=50);
-  /*position: absolute;*/
   margin: 0 auto;
   display: inline-block;
-  margin-top: 5%;
-  /*padding-bottom: 15px;*/
+  margin-top: -35%;
   color: white;
-  border: solid white;
+  border: 1px solid white;
 }
 
 .signing-in {
   height: 35%;
   width: 35%;
   background-color: #FFFFFF; opacity: 0.75; filter: alpha(opacity=50);
-  /*position: absolute;*/
   margin: 0 auto;
   display: inline-block;
-  margin-top: 5%;
+  margin-top: 2%;
   padding-bottom: 15px;
 }
 
@@ -183,7 +180,8 @@ top-holder {
   width: 75%;
   margin: 0 auto;
   display: inline-block;
-  background-color: #F0F0F0; /*opacity: 0.75; filter: alpha(opacity=50);*/
+  background-color: #F0F0F0; opacity: 0.75; filter: alpha(opacity=75);
+  margin-left: 15%;
 }
 
 .fa-head {
@@ -193,10 +191,11 @@ top-holder {
 
 .head-links {
   float: right;
+  padding-right: 25px;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #449d44;
+  /*color: #449d44;*/
 }
 
 
@@ -206,9 +205,9 @@ HEADER
 
 #banner-photo {
   background-image: url('../images/belcourt_banner.jpg');
-  height: 258px;
+  height: 198px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: initial;
   border-bottom: 3px solid #DC4C18;
   background-color: black;
 }
@@ -223,7 +222,7 @@ HEADER
   background-color: white;
   border-radius: 48px;
   padding: 4px;
-  margin-top: 155px;
+  margin-top: 100px;
 }
 
 #banner-photo div p {
@@ -240,7 +239,7 @@ HEADER
 
 .view-body {
   /*padding-top: 30px;*/
-  background-color: #ED9121;
+  background-color: #707070;
   height: 900px;
 }
 
@@ -260,4 +259,20 @@ HEADER
 
 .table-header {
   font-weight: bold;
+}
+
+.haveseen-table {
+  width: 95%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.tosee-table {
+  width: 45%;
+  /*max-width: 100%;*/
+  margin-bottom: 20px;
+  margin: 0 auto;
+  display: inline-block;
 }
