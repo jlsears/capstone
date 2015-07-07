@@ -1,4 +1,4 @@
-  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', 'Movie', function ($rootScope, $scope, $location, $firebaseArray, Movie){
+  app.controller('MovieDataCtrl', ['$rootScope', '$scope', '$location', '$firebaseArray', 'Movie', 'Auth', function ($rootScope, $scope, $location, $firebaseArray, Movie, Auth){
 
     var id = $rootScope.auth.uid.replace(':', '%3A');
     
@@ -89,6 +89,12 @@
       console.log('movie data edited!!');
     };
 
+    $scope.logout=function(){
+      Auth.logout(function() {
+        $location.path('/');
+        $scope.$apply();
+      });
+    };
  
   }]);
 

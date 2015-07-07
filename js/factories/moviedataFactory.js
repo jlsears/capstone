@@ -17,6 +17,7 @@ app.factory('Movie', ['$http', 'API_URL', function($http, API_URL){
 
   function editAMovie(id, movieId, movie, cb){
     console.log('hit the edit factory')
+    console.log(id, movieId, movie)
     $http
       .put(`${API_URL}movieinfo/${id}/${movieId}.json`, movie)
       .success(cb);

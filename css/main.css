@@ -4,6 +4,20 @@ body{
   /*background-image: url('../images/orangewallpaper.jpg');*/
 }
 
+h3 {
+  color: #585858;
+}
+
+
+/****************************
+REGISTRATION
+****************************/
+
+.register-header {
+  color: #585858;
+}
+
+
 /****************************
 HOME PAGE
 ****************************/
@@ -48,12 +62,21 @@ HOME PAGE
   padding-bottom: 15px;
 }
 
+.signing-in a {
+  color: #707070;
+}
+
+.signing-in a:hover {
+  color: #cc5500;
+  text-decoration: none;
+}
+
 /****************************
 MENU PAGE
 ****************************/
 
 .menu-body {
-  background-color: black;
+  background-color: #080808;
 }
 
 #menu-theater {
@@ -108,9 +131,8 @@ MENU PAGE
   width: 180px;
   margin-right: 20px;
   margin-bottom: 15px;
-  background-color: black; opacity: 0.45; filter: alpha(opacity=40);
-  /*color: white;*/
   padding-top: 60px;
+  background-color: black; opacity: 0.45; filter: alpha(opacity=40);
 }
 
 .entering-row {
@@ -125,49 +147,78 @@ MENU PAGE
   color: #989898;
 }
 
-this-menu {
-  width: 683px;
+.enter-data a:hover {
+  text-decoration: none;
+  color: #FF9912;
+  background-color: black; opacity: 0.45; filter: alpha(opacity=40);
+}
+
+.this-menu a:hover {
+  text-decoration: none;
+  color: #FF9912;
+}
+
+.signing-out {
+  position: absolute;
+  left: 1900px;
+  bottom: 360px;
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  background-color: #fcd856;
+}
+
+.signing-out p {
+  padding: 20px;
+}
+
+.signing-out a {
+  color: white;
+}
+
+.signing-out a:hover {
+  text-decoration: none;
+  color: #cc5500;
+  font-weight: bold;
 }
 
 
 /*******************************
 BOXES WITH BACKGROUND IMAGES
 *******************************/
+.white-pop {
+  z-index: 2;
+}
 
 .box1 {
   background-image: url('../images/box1.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
 }
 
 .box2 {
   background-image: url('../images/box2.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
+  z-index: 1;
 }
 
 .box3 {
   background-image: url('../images/box3.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .box4 {
   background-image: url('../images/box4.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .box5 {
   background-image: url('../images/box5.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .box6 {
   background-image: url('../images/box6.jpg');
-  /*background-color: black; opacity: 0.55; filter: alpha(opacity=50);*/
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -187,11 +238,6 @@ BOXES WITH BACKGROUND IMAGES
 NAVBAR
 *******************/
 
-top-holder {
-  background-color: #808080;
-  padding-bottom: 20px;
-}
-
 .nav-container {
   width: 75%;
   margin: 0 auto;
@@ -210,8 +256,14 @@ top-holder {
   padding-right: 25px;
 }
 
-.navbar-default .navbar-nav>li>a {
-  /*color: #449d44;*/
+.navbar-default .navbar-nav>li>a:hover {
+  color: #cc5500;
+  font-weight: bold;
+}
+
+.yfa p {
+  padding-top: 8px;
+  padding-left: 10px;
 }
 
 
@@ -255,7 +307,7 @@ HEADER
 
 .view-body {
   /*padding-top: 30px;*/
-  background-color: #707070;
+  background-color: #808080;
   height: 900px;
 }
 
@@ -325,6 +377,7 @@ HEADER
   margin: 0 auto;
 }
 
+
 /*******************
 FORMS
 *******************/
@@ -346,7 +399,7 @@ form-shorten {
 .style-form {
   display: inline-block;
   width: 35%;
-  border: 2px #686868 solid;
+  border: 2px #C0C0C0 solid;
   text-align: left;
   padding: 30px;
   border-radius: 5px;

@@ -8,16 +8,16 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).
     when('/menu', {
       templateUrl: 'partials/menu.html',
-      controller: 'MenuCtrl'
+      controller: 'AuthCtrl'
     }).
     when('/register', {
       templateUrl: 'partials/register.html',
       controller: 'AuthCtrl'
     }).
-    when('/login', {
-      templateUrl: 'partials/login.html',
-      controller: 'AuthCtrl'
-    }).
+    // when('/login', {
+    //   templateUrl: 'partials/login.html',
+    //   controller: 'AuthCtrl'
+    // }).
     when('/faveperformers', {
       templateUrl: 'partials/faveperformers.html',
       controller: 'PerformerCtrl'
