@@ -196,7 +196,6 @@ BOXES WITH BACKGROUND IMAGES
 
 .box2 {
   background-image: url('../images/box2.jpg');
-  z-index: 1;
 }
 
 .box3 {
@@ -223,9 +222,27 @@ BOXES WITH BACKGROUND IMAGES
   background-size: cover;
 }
 
+.box7 {
+  background-image: url('../images/box7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.box img {
+.box8 {
+  background-image: url('../images/box8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.box9 {
+  background-image: url('../images/box9.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+img {
+  z-index: 1;
 }
 
 .box a {
@@ -254,6 +271,7 @@ NAVBAR
 .head-links {
   float: right;
   padding-right: 25px;
+  font-size: 12px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -266,6 +284,9 @@ NAVBAR
   padding-left: 10px;
 }
 
+.size-that-glyph {
+  font-size: 25px;
+}
 
 /*******************
 HEADER
@@ -332,7 +353,7 @@ HEADER
 .data-holder-sm {
   background-color: white;
   width: 90%;
-  height: 400px;
+  height: 450px;
   display: inline-block;
   background-color: white;
   padding-top: 50px;
@@ -376,6 +397,16 @@ HEADER
   margin-bottom: 20px;
   margin: 0 auto;
 }
+
+
+/*******************
+VIEW TITLE TEXT
+*******************/
+
+.view-title {
+  font-family: 'Raleway';
+}
+
 
 
 /*******************
