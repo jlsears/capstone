@@ -10,7 +10,7 @@
             <td>Edit</td>
       </thead>
       <tbody>
-        <tr ng-repeat='artist in artistlisting track by $index'>
+        <tr ng-repeat='artist in artistlisting'>
             <td>{{artist.name}}</td>
             <td>{{artist.artist_type}}</td>
             <td><button type='button' class="btn btn-success" ng-click="deleteAnArtist(artist)"><span class="glyphicon glyphicon-trash"></span></button></td>

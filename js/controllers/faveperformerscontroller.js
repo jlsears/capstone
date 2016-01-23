@@ -23,6 +23,13 @@
         console.log(event);
       });
 
+    $scope.deleteAnArtist = function(artist) {
+      console.log('delete button clicked!');
+      artistListing.$remove({artist});
+      $location.path('/menu');
+    };
+
+
     $scope.showListData = true;
 
     $scope.showListDataBtn = function() {

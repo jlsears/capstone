@@ -29,8 +29,9 @@
       });
 
     $scope.deleteAMovie = function(movie) {
-      console.log('delete button clicked!');
-      movieListing.$remove({movie});
+      console.log('delete button clicked for controller!');
+      movieListing.$remove(movie);
+      console.log("removed: " + movie);
       $location.path('/menu');
     }
 
