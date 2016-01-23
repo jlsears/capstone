@@ -28,6 +28,13 @@
         console.log(event);
       });
 
+    $scope.deleteAMovie = function(movie) {
+      console.log('delete button clicked!');
+      movieListing.$remove({movie});
+      $location.path('/menu');
+    }
+
+
     $scope.showListData = true;
 
     $scope.showListDataBtn = function() {
