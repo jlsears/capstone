@@ -13,9 +13,11 @@
     $scope.addMovieData = function() {
       movieListing.$add({
         title: $scope.title,
-        director: $scope.director,
-        theater: $scope.theater,
-        moviegoers: $scope.moviegoers,
+        director: $scope.director || null,
+        theater: $scope.theater || null,
+        moviegoers: $scope.moviegoers || null,
+        date: $scope.date || null,
+        response: $scope.response || null,
         seenstatus: $scope.seenstatus
       });
       $location.path('/menu');
@@ -40,13 +42,13 @@
     }
 
     $scope.submitThis = function(movie) {
-      movieListing.$save({
+/*      movieListing.$save({
         title: $scope.title,
         director: $scope.director,
         theater: $scope.theater,
         moviegoers: $scope.moviegoers,
         seenstatus: $scope.seenstatus
-      });
+      });*/
       $scope.showEditFields = false; 
       $scope.showListData = true;
       console.log('movie data edited!!');
