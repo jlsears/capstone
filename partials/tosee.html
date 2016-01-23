@@ -12,7 +12,7 @@
         <tr ng-repeat='movie in movielisting' ng-if='!movie.seenstatus'>
             <td>{{movie.title}}</td>
             <td>{{movie.director}}</td>
-            <td><button type='button' class="btn btn-success" ng-click="deleteAMovie(keys[$index])"><span class="glyphicon glyphicon-trash"></span></button></td>
+            <td><button type='button' class="btn btn-success" ng-click="deleteAMovie(movie)"><span class="glyphicon glyphicon-trash"></span></button></td>
             <td><button type='button' class="btn btn-success" ng-click="showEditFieldsBtn(movie)"><span class="glyphicon glyphicon-pencil"></span></button></td>
         </tr>
       </tbody>
