@@ -24,8 +24,9 @@
       });
 
     $scope.deleteAnArtist = function(artist) {
-      console.log('delete button clicked!');
-      artistListing.$remove({artist});
+      console.log('delete button clicked for artist controller!');
+      artistListing.$remove(artist);
+      console.log("Artist removed: " + artist);
       $location.path('/menu');
     };
 
