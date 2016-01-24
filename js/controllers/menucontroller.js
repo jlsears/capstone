@@ -2,7 +2,7 @@
     $scope.message = "Where the menu lives!";
     $scope.logout=function(){
       Auth.logout(function() {
-        $location.path('/login');
+        $location.path('/');
         $scope.$apply();
     });
   };
